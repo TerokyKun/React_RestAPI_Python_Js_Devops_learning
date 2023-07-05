@@ -1,0 +1,26 @@
+.accauntInfo{
+    
+    display: flex;
+    justify-content: space-around;
+    margin-top: 200px;
+
+}
+.accauntInfo:hover{
+    cursor: pointer;
+    background-color: rgb(70, 70, 70);
+}
+.avatar{
+font-size: 30px;
+background-color: rgb(255, 255, 255);
+border-radius: 50%;
+color: rgb(0, 0, 0);
+ width: 50px;
+ height: 50px;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+.accauntText{
+    color: rgb(255, 255, 255);
+}
