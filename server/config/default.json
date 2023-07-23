@@ -1,0 +1,4 @@
+{
+    "serverPort":5000,
+    "dbURL":"mongodb+srv://Teroky:12345@cluster0.i7ybg1b.mongodb.net/"
+}
