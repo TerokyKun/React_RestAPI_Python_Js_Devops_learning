@@ -1,6 +1,7 @@
-import MenuButton from "./components/UI/Buttons/MenuButton"
+
 import MainMenu from "./components/Elems/MainMenu"
 import PostsZone from "./components/Elems/PostZone/PostsZone"
+import ArtZone from "./components/Elems/ArtZone/ArtZone"
 
 const App = () => {
  
@@ -8,8 +9,9 @@ const App = () => {
   return (
     <>
 <div className=''>
-  <MainMenu></MainMenu>
+<MainMenu></MainMenu>
 <PostsZone></PostsZone>
+<ArtZone></ArtZone>
 </div>
 
     </>
