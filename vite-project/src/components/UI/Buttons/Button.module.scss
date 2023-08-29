@@ -1,0 +1,31 @@
+
+$button-color: #8a2be2;
+$button-color-hover:#6b238e;
+
+
+
+.generate {
+    background-color:$button-color; 
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease; 
+
+
+    @media (max-width: 761px) {
+
+      width: 200px; 
+      height: 100px; 
+      display: block;
+      margin: 0 auto; 
+  }
+    &:hover {
+      background-color: $button-color-hover; 
+    }
+
+
+  }
+  

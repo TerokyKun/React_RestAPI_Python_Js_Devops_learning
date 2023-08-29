@@ -1,5 +1,5 @@
 import React from "react";
-import classes from "./ArtZone.module.css";
+import classes from "./ArtZone.module.scss";
 import data from '/vite-project/public/dataBaseArtForTest.json';
 
 const ArtZone = () => {

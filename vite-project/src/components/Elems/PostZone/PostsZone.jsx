@@ -1,5 +1,5 @@
 import React from "react";
-import classes from "./PostZone.module.css";
+import classes from "./PostZone.module.scss";
 
 const PostsZone = () => {
   return (

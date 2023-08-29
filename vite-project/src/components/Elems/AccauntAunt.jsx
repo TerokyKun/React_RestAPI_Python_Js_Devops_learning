@@ -1,5 +1,5 @@
 import React from "react";
-import classes from "./AccauntAunt.module.css";
+import classes from "./AccauntAunt.module.scss";
 const AccauntAunt = () => {
   return (
     <>

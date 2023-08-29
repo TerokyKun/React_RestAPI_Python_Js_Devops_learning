@@ -1,22 +1,17 @@
-const express = require("express")
-const mongoose = require("mongoose")
-const config = require("config")
-const authRouter = require("./routes/auth.routes")
-const app = express()
-const PORT = config.get('serverPort')
+const { spawn } = require('child_process');
 
-app.use(express.json())
-app.use("/api/auth", authRouter)
+const batFilePath = 'D:/stable-diffusion-portable-main/stable-diffusion-portable-main/webui-user.bat';
 
-const start = async () => {
-    try {
-        await mongoose.connect(config.get("dbURL"))
+const batProcess = spawn(batFilePath);
 
-        app.listen(PORT, () => {
-            console.log("Server started on port ", PORT)
-        })
-    } catch (error) {
-        console.error(error)
-    }
-}
-start()
+batProcess.stdout.on('data', (data) => {
+    console.log(`stdout: ${data}`);
+});
+
+batProcess.stderr.on('data', (data) => {
+    console.error(`stderr: ${data}`);
+});
+
+batProcess.on('close', (code) => {
+    console.log(`child process exited with code ${code}`);
+});

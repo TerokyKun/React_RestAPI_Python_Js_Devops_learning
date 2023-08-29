@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './MenuButton.module.css';
+import classes from './MenuButton.module.scss';
 
 const MenuButton = (props) => {
     return (

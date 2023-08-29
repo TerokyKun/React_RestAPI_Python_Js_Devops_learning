@@ -1,0 +1,57 @@
+/* ArtGenerate.module.scss */
+
+$front-size-textarea: 14px;
+$font-weight-textarea: 200;
+$line-height-textarea: 120%;
+$height-textarea: 255px;
+$text-color-textarea: #979797;
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  color: aliceblue;
+  z-index: 10;
+}
+
+.artZone {
+  padding: 10px;
+  margin-left: 271px;
+}
+
+p {
+  color: aliceblue;
+}
+
+textarea {
+  width: 100%;
+  word-wrap: break-word;
+  resize: none;
+  font-size: $front-size-textarea;
+  font-weight: $font-weight-textarea;
+  overflow-y: scroll;
+  height: $height-textarea;
+  line-height: $line-height-textarea;
+  background-color: #101622;
+  color: $text-color-textarea;
+  overflow-y: unset;
+  border-radius: 5px;
+}
+
+// Для выбора моделей
+select {
+  font-size: 16px;
+  padding: 8px;
+  border: 1px solid #bf00ff;
+  border-radius: 4px;
+  background-color: #272727;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  outline: none; 
+  appearance: none; 
+  padding-right: 20px; 
+}
