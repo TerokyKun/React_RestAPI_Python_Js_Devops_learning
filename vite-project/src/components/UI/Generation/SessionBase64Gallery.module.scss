@@ -1,0 +1,22 @@
+$sessionItem-border:2px solid white;
+
+.thumbnail {
+    width: 20%;
+    height: 20%;
+    margin: 5px;
+    cursor: pointer;
+  }
+  .sessionItem{
+    display: flex;
+    margin: 8px;
+    padding: 8px;
+    border-radius: 5px;
+    border:$sessionItem-border;
+  }
+  
+  .sessionGallery{
+
+  width: 100%;
+  height: 100%;
+
+  }

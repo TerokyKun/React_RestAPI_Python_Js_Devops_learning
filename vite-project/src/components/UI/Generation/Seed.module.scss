@@ -1,0 +1,23 @@
+$text-color-seedInput: #979797;
+$front-size-seedInput: 14px;
+$font-weight-seedInput: 200;
+
+
+.container{
+    margin: 8px 0;
+}
+
+
+.seedInput{
+    display: flex;
+    background-color: #101622;
+    border-radius: 5px;
+    color: $text-color-seedInput;
+    font-size: $front-size-seedInput;
+    font-weight: $font-weight-seedInput;
+    border: 1px solid;
+    padding: 4px;
+}
+p{
+    margin: 10px;
+}
