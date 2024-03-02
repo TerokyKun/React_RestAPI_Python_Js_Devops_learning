@@ -1,0 +1,85 @@
+/* ArtGenerate.module.scss */
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  
+}
+
+/* ArtGenerate.module.scss */
+
+
+
+.heading {
+  display: flex;
+  justify-content: center;
+  color: aliceblue;
+  z-index: 10;
+}
+
+.artZoneBG{
+ /* зафиксируем элемент */
+  top: 0;
+  left: 0;
+  width: 100wh; /* займет всю ширину экрана */
+  height: 100vh; /* займет всю высоту экрана */
+  padding: 10px;
+
+  background-color: rgb(27, 27, 27);
+}
+
+.artZone {
+  padding: 10px;
+  margin-left: 271px;
+  
+}
+
+
+
+textarea {
+  width: 98%;
+  word-wrap: break-word;
+  resize: none;
+  font-size: 14px;
+  font-weight: 200;
+  overflow-y: scroll;
+  height: 255px;
+  line-height: 120%;
+  background-color: #101622;
+  color: #979797;
+  overflow-y: unset;
+  border-radius: 5px;
+  padding: 6px;
+  margin-left: 10px;
+}
+
+// Для выбора моделей
+select {
+  margin-left: 10px;
+  margin-top: 8px;
+  font-size: 16px;
+  padding: 8px;
+  border: 1px solid #bf00ff;
+  border-radius: 4px;
+  background-color: #272727;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  outline: none; 
+  appearance: none; 
+  padding-right: 20px; 
+}
+
+.params{
+  background-color: #101622;
+  border: 1px solid #979797;
+  padding: 8px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+
+.loginPls {
+  padding: 10px;
+  margin-left: 271px;
+  
+}

@@ -1,0 +1,23 @@
+$text-color-CFGscaleInput: #979797;
+$front-size-CFGscaleInput: 14px;
+$font-weight-CFGscaleInput: 200;
+
+
+.container{
+    margin: 8px 0;
+}
+
+
+.CFGscaleInput{
+    display: flex;
+    background-color: #101622;
+    border-radius: 5px;
+    color: $text-color-CFGscaleInput;
+    font-size: $front-size-CFGscaleInput;
+    font-weight: $font-weight-CFGscaleInput;
+    border: 1px solid;
+    padding: 4px;
+}
+p{
+    margin: 10px;
+}

@@ -1,0 +1,32 @@
+
+.heading {
+    display: flex;
+    justify-content: center;
+    color: aliceblue;
+    z-index: 10;
+}
+
+.postZoneBG{
+    /* зафиксируем элемент */
+     top: 0;
+     left: 0;
+     width: 100wh; /* займет всю ширину экрана */
+     height: 100vh; /* займет всю высоту экрана */
+     padding: 10px;
+   
+     background-color: rgb(27, 27, 27);
+   }
+   
+   .postZone {
+     padding: 10px;
+     margin-left: 271px;
+     
+   }
+   .container {
+    max-width: 100%;
+    margin: 0 auto;
+    
+  }
+.positionPosts{
+    margin-top: 50px;
+}

@@ -1,0 +1,8 @@
+db.createUser({
+  user: "Tero",
+  pwd: "12345",
+})
+
+
+
+mongod.exe --config .\mongod.cfg --dbpath C:\MongoDB\Server\7.0\data --logpath C:\MongoDB\Server\7.0\log

@@ -1,0 +1,23 @@
+$text-color-stepsInput: #979797;
+$front-size-stepsInput: 14px;
+$font-weight-stepsInput: 200;
+
+
+.container{
+    margin: 8px 0;
+}
+
+
+.stepsInput{
+    display: flex;
+    background-color: #101622;
+    border-radius: 5px;
+    color: $text-color-stepsInput;
+    font-size: $front-size-stepsInput;
+    font-weight: $font-weight-stepsInput;
+    border: 1px solid;
+    padding: 4px;
+}
+p{
+    margin: 10px;
+}

@@ -1,0 +1,64 @@
+$text-color-parametrsW: #979797;
+$front-size-parametrsW: 14px;
+$font-weight-parametrsW: 200;
+
+
+
+
+
+.valuesWidth{
+    display: flex;
+    background-color: #101622;
+    border-radius: 5px;
+    color: $text-color-parametrsW;
+    font-size: $front-size-parametrsW;
+    font-weight: $font-weight-parametrsW;
+    border: 1px solid;
+    padding: 4px;
+    margin-top: 10px;
+}
+
+
+
+.range{
+    height: 95px;
+    width: 360px;
+    position: relative;
+    border-radius: 5px;
+    padding: 0 65px 0 45px;
+    color: #fff;
+}
+
+
+.range .field input{
+width: 360px;
+
+}
+
+
+.sliderValue{
+    position: relative;
+    height: 45px;
+    width: 45px;
+    color: #ddd;
+    font-weight: 500;
+    
+    z-index: 2;
+   
+    
+    left: 50%;
+    
+
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+
+
+    background-color: #8911c0; /* Цвет кружка */
+    text-align: center; /* Выравнивание текста по центру */
+    transition: all 0.2s; /* Добавьте плавный переход */
+}
+
+.field{
+    display: flex;
+  
+}
