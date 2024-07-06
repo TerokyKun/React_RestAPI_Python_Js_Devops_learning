@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .mainMenu {
     position: fixed;
     display: flex;
@@ -7,12 +8,16 @@
     border-right: 2px solid black;
     overflow: hidden; /* Предотвращаем выход содержимого за пределы блока */
 }
+=======
+/* Burgermenu.module.scss */
+>>>>>>> 1117adf (хранение изображений локально на серверном приложении, адаптив, интерфейс галлереи, фикс багов с токенами)
 
 .accauntInfo {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
+<<<<<<< HEAD
     padding: 20px; /* Добавляем отступы, чтобы контент был видимым и читаемым */
     display: flex;
     justify-content: space-around;
@@ -27,6 +32,23 @@
 }
 
 .avatar {
+=======
+    padding: 26px; /* Добавляем отступы, чтобы контент был видимым и читаемым */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+    background-color: rgb(27, 27, 27);
+    transition: background-color 0.3s ease;
+  }
+  
+  .accauntInfo:hover {
+    background-color: rgb(90, 90, 90); /* Изменяем цвет при наведении */
+    cursor: pointer;
+  }
+  
+  .avatar {
+>>>>>>> 1117adf (хранение изображений локально на серверном приложении, адаптив, интерфейс галлереи, фикс багов с токенами)
     font-size: 30px;
     background-color: rgb(255, 255, 255);
     border-radius: 50%;
@@ -36,8 +58,40 @@
     display: flex;
     justify-content: center;
     align-items: center;
+<<<<<<< HEAD
 }
 
 .accauntText {
     color: rgb(255, 255, 255);
 }
+=======
+  }
+  
+  .accauntText {
+    color: rgb(255, 255, 255);
+  }
+  
+  /* Применяем стили для маленьких экранов */
+  @media (max-width: 768px) {
+    .accauntInfo {
+        position:unset;
+      padding: 10px; /* Уменьшаем отступы */
+    }
+
+    // .accauntInfo:hover {
+    //     background-color: unset; /* Изменяем цвет при наведении */
+    //     cursor: unset;
+    //   }
+    
+    .avatar {
+      font-size: 20px; /* Уменьшаем размер шрифта */
+      width: 40px; /* Уменьшаем размер аватара */
+      height: 40px;
+    }
+    
+    .accauntText {
+      font-size: 14px; /* Уменьшаем размер шрифта */
+    }
+  }
+  
+>>>>>>> 1117adf (хранение изображений локально на серверном приложении, адаптив, интерфейс галлереи, фикс багов с токенами)

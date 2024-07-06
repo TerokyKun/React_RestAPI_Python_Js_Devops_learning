@@ -11,7 +11,11 @@ const Login = () => {
 const token = useSelector(selectToken);
 
 // Устанавливаем куку с токеном
+<<<<<<< HEAD
 document.cookie = `access_token=${token}; path=/; expires=${new Date(Date.now() + 86400e3).toUTCString()}`;
+=======
+document.cookie = `access_token=${token}; path=/; expires=${new Date(Date.now() + 1209600).toUTCString()}`;
+>>>>>>> 1117adf (хранение изображений локально на серверном приложении, адаптив, интерфейс галлереи, фикс багов с токенами)
 
 
   const dispatch = useDispatch();
@@ -55,7 +59,11 @@ if( isAuth) {
     <>
       <div className={classes.container}>
         <div className={classes.formContainer}>
+<<<<<<< HEAD
           <span className={classes.nameProject}>TerokyArt.Ai</span>
+=======
+          <span className={classes.nameProject}>Art.Ai</span>
+>>>>>>> 1117adf (хранение изображений локально на серверном приложении, адаптив, интерфейс галлереи, фикс багов с токенами)
           <form className={classes.form} onSubmit={handleSubmit(onSubmit)}>
             <span className={classes.loginTitle}>Login account</span>
             {serverError && <p className={classes.error}>{serverError}</p>}

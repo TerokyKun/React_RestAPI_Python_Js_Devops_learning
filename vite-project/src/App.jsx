@@ -19,6 +19,31 @@ const App = () => {
   React.useEffect(() => {
     dispatch(fetchLogin())
   }, [])
+<<<<<<< HEAD
+=======
+  return (
+    <>
+      <Routes>
+        <Route path="/" element = {<MainMenu/>}>
+          <Route index element={<MainPage />} />
+          <Route path="generate" element={<ArtGenerate />} />
+          <Route path="test" element={<Test />} />
+          <Route path="help" />
+          <Route path="settings" />
+          <Route path="community" element={<Comunity />}/>
+          <Route path="user" element={<UserProfil />}/>
+        </Route>
+        <Route path="auth/login"  element={<Login />} />
+        <Route path="/signup"  element={<Signup />} />
+      </Routes>
+    </>
+  );
+};
+
+export default App;
+
+
+>>>>>>> 1117adf (хранение изображений локально на серверном приложении, адаптив, интерфейс галлереи, фикс багов с токенами)
 
 // // Получаем токен из куки
 // const getCookie = (name) => {
@@ -56,6 +81,7 @@ const App = () => {
 //   // Токен отсутствует, пользователь не авторизован
 //   console.log('Токен отсутствует, пользователь не авторизован');
 // }
+<<<<<<< HEAD
 
 
   return (
@@ -78,3 +104,5 @@ const App = () => {
 };
 
 export default App;
+=======
+>>>>>>> 1117adf (хранение изображений локально на серверном приложении, адаптив, интерфейс галлереи, фикс багов с токенами)

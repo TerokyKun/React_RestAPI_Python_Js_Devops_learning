@@ -19,7 +19,13 @@ const MainMenu = () => {
   return (
     <>
       <div className={classes.mainMenu}>
+<<<<<<< HEAD
         <h1>TerokyArt.AI</h1>
+=======
+      <Link to="/" className={classes.titleLink}>
+          <h1>Art.AI</h1>
+        </Link>
+>>>>>>> 1117adf (хранение изображений локально на серверном приложении, адаптив, интерфейс галлереи, фикс багов с токенами)
         <p className={classes.menuText}>Start here</p>
         <Link to="/">
           <MenuButton>Home</MenuButton>
@@ -30,12 +36,15 @@ const MainMenu = () => {
         <Link to="/generate">
           <MenuButton>Ai Generation</MenuButton>
         </Link>
+<<<<<<< HEAD
         {/* <Link to="/settings">
           <MenuButton>Settings</MenuButton>
         </Link>
         <Link to="/help">
           <MenuButton>FAQ & Help</MenuButton>
         </Link> */}
+=======
+>>>>>>> 1117adf (хранение изображений локально на серверном приложении, адаптив, интерфейс галлереи, фикс багов с токенами)
        {isAuth ? (
           <Link to="/" onClick={onClickLogout}>
             <MenuButton>Logout</MenuButton>
@@ -45,9 +54,13 @@ const MainMenu = () => {
             <MenuButton>Login</MenuButton>
           </Link>
         )}
+<<<<<<< HEAD
         {/* <Link to="/test">
           <MenuButton>Test Node</MenuButton>
         </Link> */}
+=======
+      
+>>>>>>> 1117adf (хранение изображений локально на серверном приложении, адаптив, интерфейс галлереи, фикс багов с токенами)
  {isAuth ? (        
 <Link to="user">
 <AccauntAunt></AccauntAunt>
@@ -62,3 +75,18 @@ const MainMenu = () => {
 };
 
 export default MainMenu;
+<<<<<<< HEAD
+=======
+
+
+{/* <Link to="/settings">
+          <MenuButton>Settings</MenuButton>
+        </Link>
+        <Link to="/help">
+          <MenuButton>FAQ & Help</MenuButton>
+        </Link> */}
+
+          {/* <Link to="/test">
+          <MenuButton>Test Node</MenuButton>
+        </Link> */}
+>>>>>>> 1117adf (хранение изображений локально на серверном приложении, адаптив, интерфейс галлереи, фикс багов с токенами)

@@ -1,6 +1,10 @@
 import jwt from 'jsonwebtoken'
 import bcrypt from 'bcrypt'
+<<<<<<< HEAD
 
+=======
+import ImageModel from '../Models/Gallery.js';
+>>>>>>> 1117adf (хранение изображений локально на серверном приложении, адаптив, интерфейс галлереи, фикс багов с токенами)
 
 import UserModel from '../Models/User.js';
 
@@ -110,4 +114,41 @@ export const getMe =  async (req,res)=>{
          message: "Нет доступа",
      });
  }
+<<<<<<< HEAD
     };
+=======
+    };
+
+
+
+    
+
+    
+
+    export const getAll = async (req, res) => {
+        try {
+            const userId = req.userId;
+            const images = await ImageModel.find({ user: userId });
+            
+            const imageData = images.map(image => {
+                return {
+                    imageName: image.imageName,
+                    imagePath: `/uploads/${userId}/${image.imageName}.png`,
+                    imageData: image.imageData, // извлекаем дополнительные данные об изображении из модели
+                    createdAt: image.createdAt, // Добавляем дату создания изображения
+                };
+            });
+    
+            console.log('Image data:', imageData); // Выводим результат в консоль
+    
+            res.json(imageData);
+        } catch (err) {
+            console.log(err);
+            res.status(500).json({
+                message: "Не удалось получить изображения",
+            });
+        }
+    };
+    
+    
+>>>>>>> 1117adf (хранение изображений локально на серверном приложении, адаптив, интерфейс галлереи, фикс багов с токенами)

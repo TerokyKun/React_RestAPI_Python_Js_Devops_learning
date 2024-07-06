@@ -11,6 +11,7 @@ import Seed from "../components/UI/Generation/Seed";
 import Steps from "../components/UI/Generation/Steps";
 import CFGscale from "../components/UI/Generation/CFGscale";
 import { useSelector } from "react-redux";
+<<<<<<< HEAD
 import { selectIsAuth } from "../redux/slises/auth";
 
 const ArtGenerate = () => {
@@ -19,6 +20,17 @@ const ArtGenerate = () => {
   const [prompt, setPrompt] = useState("");
   const [negativePrompt, setNegativePrompt] = useState(
     "(deformed, distorted, disfigured:1.3), (loli:1.4), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs,  (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, (underwear, panties, bra, swimsuit, bed linen,nippless, skirt, underpants, nude breast, without clothes, text:1.4),  "
+=======
+import { selectIsAuth, selectToken } from "../redux/slises/auth";
+import Burgermenu from "../components/UI/Burgermenu/Burgermenu";
+
+const ArtGenerate = () => {
+  const isAuth = useSelector(selectIsAuth);
+  const token = useSelector(selectToken) || document.cookie.split('; ').find(row => row.startsWith('access_token=')).split('=')[1] || "";
+  const [prompt, setPrompt] = useState("");
+  const [negativePrompt, setNegativePrompt] = useState(
+    "(deformed, distorted, disfigured:1.3), (loli:1.4), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs,  (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry"
+>>>>>>> 1117adf (хранение изображений локально на серверном приложении, адаптив, интерфейс галлереи, фикс багов с токенами)
   );
   const [seed, setSeed] = useState(-1);
   const [width, setWidth] = useState(512);
@@ -33,11 +45,18 @@ const ArtGenerate = () => {
     CLIP_stop_at_last_layers: 2,
   });
 
+<<<<<<< HEAD
   const apiUrl = "http://127.0.0.1:7860/sdapi/v1/txt2img";
   const optionsUrl = "http://127.0.0.1:7860/sdapi/v1/options";
 
   const handleGenerateImage = async () => {
     
+=======
+  const apiUrl = "http://127.0.0.1:4000/createimg";
+  const optionsUrl = "http://127.0.0.1:4000/sendoption";
+
+  const handleGenerateImage = async () => {
+>>>>>>> 1117adf (хранение изображений локально на серверном приложении, адаптив, интерфейс галлереи, фикс багов с токенами)
     if (isGenerating) return;
 
     // Фильтрация нежелательных символов из prompt
@@ -63,14 +82,25 @@ const ArtGenerate = () => {
         sampler_index: "Euler a",
       };
 
+<<<<<<< HEAD
       const response = await axios.post(apiUrl, payload);
+=======
+      const response = await axios.post(apiUrl, payload, {
+        headers: { Authorization: `Bearer ${token}` },
+      });
+
+>>>>>>> 1117adf (хранение изображений локально на серверном приложении, адаптив, интерфейс галлереи, фикс багов с токенами)
       // const imageBlob = await fetch(
       //   `data:image/jpeg;base64,${response.data.images[0]}`
       // ).then((res) => res.blob());
 
       const backIngoImage = response.data.info;
       const useBackIngoImage = JSON.parse(backIngoImage);
+<<<<<<< HEAD
       console.log(backIngoImage)
+=======
+      // console.log(backIngoImage);
+>>>>>>> 1117adf (хранение изображений локально на серверном приложении, адаптив, интерфейс галлереи, фикс багов с токенами)
 
       const newSession = {
         id: Date.now(),
@@ -105,6 +135,10 @@ const ArtGenerate = () => {
         <div className={classes.artZoneBG}>
           <div className={classes.artZone}>
             <div className={classes.container}>
+<<<<<<< HEAD
+=======
+            <Burgermenu></Burgermenu>
+>>>>>>> 1117adf (хранение изображений локально на серверном приложении, адаптив, интерфейс галлереи, фикс багов с токенами)
               <h2 className={classes.heading}>Hello in generation!</h2>
               <section>
                 <select
@@ -142,6 +176,7 @@ const ArtGenerate = () => {
           </div>
         </div>
       ) : (
+<<<<<<< HEAD
        <>
         <h2 className={classes.heading}>Hello in generation!</h2>
         <p className={classes.loginPls}>
@@ -150,6 +185,17 @@ const ArtGenerate = () => {
           the best works and posts from our community.
         </p>
         </>  
+=======
+        <>
+          <Burgermenu></Burgermenu>
+          <h2 className={classes.heading}>Hello in generation!</h2>
+          <p className={classes.loginPls}>
+            Welcome! Log in or register to join our community of creative
+            people. If you don't want to register right now, you can view the
+            gallery of the best works and posts from our community.
+          </p>
+        </>
+>>>>>>> 1117adf (хранение изображений локально на серверном приложении, адаптив, интерфейс галлереи, фикс багов с токенами)
       )}
     </>
   );
