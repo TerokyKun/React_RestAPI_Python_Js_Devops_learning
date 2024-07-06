@@ -2,71 +2,7 @@ $text-color-parametrsH: #979797;
 $front-size-parametrsH: 14px;
 $font-weight-parametrsH: 200;
 
-<<<<<<< HEAD
 
-
-
-
-.valuesHeght{
-    display: flex;
-    background-color: #101622;
-    border-radius: 5px;
-    color: $text-color-parametrsH;
-    font-size: $front-size-parametrsH;
-    font-weight: $font-weight-parametrsH;
-    border: 1px solid;
-    padding: 4px;
-    margin-top: 10px;
-}
-
-
-
-.range{
-    height: 95px;
-    width: 360px;
-    position: relative;
-
-    border-radius: 5px;
-    padding: 0 65px 0 45px;
-    color: #fff;
-}
-
-
-.range .field input{
-width: 360px;
-
-}
-
-
-.sliderValue{
-    position: relative;
-    height: 45px;
-    width: 45px;
-    color: #ddd;
-    font-weight: 500;
-    
-    z-index: 2;
-   
-    
-    left: 50%;
-    
-
-    border-bottom-left-radius: 50%;
-    border-bottom-right-radius: 50%;
-
-
-    background-color: #8911c0; /* Цвет кружка */
-    text-align: center; /* Выравнивание текста по центру */
-    transition: all 0.2s; /* Добавьте плавный переход */
-}
-
-.field{
-    display: flex;
-  
-}
-
-
-=======
 .valuesHeght {
   display: flex;
   background-color: #101622;
@@ -119,4 +55,3 @@ width: 360px;
 .field {
   display: flex;
 }
->>>>>>> 1117adf (хранение изображений локально на серверном приложении, адаптив, интерфейс галлереи, фикс багов с токенами)

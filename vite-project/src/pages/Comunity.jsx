@@ -5,10 +5,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchPosts, fetchTags } from '../redux/slises/posts';
 import Post from '../components/Post/Post';
 import TagsBlock from '../components/Tags/TagsBlock';
-<<<<<<< HEAD
-=======
 import Burgermenu from '../components/UI/Burgermenu/Burgermenu';
->>>>>>> 1117adf (хранение изображений локально на серверном приложении, адаптив, интерфейс галлереи, фикс багов с токенами)
+
 
 const Comunity = () => {
   const dispatch = useDispatch();
@@ -55,10 +53,7 @@ const Comunity = () => {
   return (
     <>
       <div className={classes.postZoneBG}>
-<<<<<<< HEAD
-=======
       <Burgermenu />
->>>>>>> 1117adf (хранение изображений локально на серверном приложении, адаптив, интерфейс галлереи, фикс багов с токенами)
         <div className={classes.postZone}>
           <h2 className={classes.heading}>Here are posts from the community</h2>
           <TagsBlock items={tags.items} isLoading={isTagsLoading} />

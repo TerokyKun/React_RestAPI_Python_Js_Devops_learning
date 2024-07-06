@@ -1,11 +1,6 @@
 import jwt from 'jsonwebtoken'
 import bcrypt from 'bcrypt'
-<<<<<<< HEAD
-
-=======
 import ImageModel from '../Models/Gallery.js';
->>>>>>> 1117adf (хранение изображений локально на серверном приложении, адаптив, интерфейс галлереи, фикс багов с токенами)
-
 import UserModel from '../Models/User.js';
 
 
@@ -114,15 +109,8 @@ export const getMe =  async (req,res)=>{
          message: "Нет доступа",
      });
  }
-<<<<<<< HEAD
-    };
-=======
-    };
-
-
-
     
-
+}
     
 
     export const getAll = async (req, res) => {
@@ -150,5 +138,3 @@ export const getMe =  async (req,res)=>{
         }
     };
     
-    
->>>>>>> 1117adf (хранение изображений локально на серверном приложении, адаптив, интерфейс галлереи, фикс багов с токенами)

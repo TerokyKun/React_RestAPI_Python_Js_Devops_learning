@@ -1,34 +1,4 @@
-<<<<<<< HEAD
-import React from "react";
-import classes from "./UserProfil.module.scss";
-import data from '../../public/dataBaseArtForTest.json';
-import { useSelector } from "react-redux";  
-import { selectIsAuth } from "../redux/slises/auth";
 
-const UserProfil = () => {
-    const isAuth = useSelector(selectIsAuth);
-  return (
-
-<>
-   
-  <div className={classes.gallery}>
-      {data.map((item) => (
-        <img className={classes.art} key={item.id} src={item.image} alt={`Image ${item.id}`} />
-      ))}
-    </div>
-  
-   
-  
-
-</>
-  );
-};
-
-
-
-
-export default UserProfil;
-=======
 import React, { useEffect, useState, useRef } from "react";
 import { useSelector } from "react-redux";
 import { selectIsAuth, selectToken } from "../redux/slises/auth";
@@ -164,4 +134,3 @@ const UserProfil = () => {
 };
 
 export default UserProfil;
->>>>>>> 1117adf (хранение изображений локально на серверном приложении, адаптив, интерфейс галлереи, фикс багов с токенами)

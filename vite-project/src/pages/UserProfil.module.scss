@@ -1,43 +1,14 @@
-<<<<<<< HEAD
-.gallery{
-    margin-left: 271px;
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-=======
 .gallery {
     margin-left: 271px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     /* Адаптивное количество колонок */
->>>>>>> 1117adf (хранение изображений локально на серверном приложении, адаптив, интерфейс галлереи, фикс багов с токенами)
     grid-auto-rows: auto;
     grid-gap: 1vw;
     grid-auto-flow: dense;
     padding: 20px;
 }
-<<<<<<< HEAD
-.art{
-height: 100%;
-width: 100%;
-border-radius: 8px;
-}
 
-
-.loginPls {
-    padding: 10px;
-    margin-left: 271px;
-    
-}
-
-.heading {
-    display: flex;
-    justify-content: center;
-    color: aliceblue;
-    z-index: 10;
-  }
-  
-=======
 
 .art {
     width: 100%;
@@ -152,4 +123,34 @@ border-radius: 8px;
         max-height: 95vh;
     }
 }
->>>>>>> 1117adf (хранение изображений локально на серверном приложении, адаптив, интерфейс галлереи, фикс багов с токенами)
+
+.gallery{
+    margin-left: 271px;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 1vw;
+    grid-auto-flow: dense;
+    padding: 20px;
+}
+.art{
+height: 100%;
+width: 100%;
+border-radius: 8px;
+}
+
+
+.loginPls {
+    padding: 10px;
+    margin-left: 271px;
+    
+}
+
+.heading {
+    display: flex;
+    justify-content: center;
+    color: aliceblue;
+    z-index: 10;
+  }
+  

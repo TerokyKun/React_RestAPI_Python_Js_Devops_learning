@@ -1,69 +1,68 @@
 
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Добавлено для центрирования по вертикали */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Добавлено для центрирования по вертикали */
+}
+
+.formContainer {
+  text-align: center; /* Центрирование содержимого внутри формы */
+}
+
+.nameProject {
+  font-size: 56px;
+  font-weight: 300;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.loginTitle {
+  font-size: 18px;
+  font-weight: bold;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: rgb(27, 27, 27);
+}
+
+.label {
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+.input {
+  padding: 8px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.loginLink {
+  color: blue; /* Цвет ссылки */
+  text-decoration: none; /* Убрать подчеркивание */
+  font-weight: bold; /* Жирный шрифт */
+  /* Другие стили по вашему усмотрению */
+  &:hover {
+      color: rgb(100, 100, 204);/* Цвет при наведении */
   }
-  
-  .formContainer {
-    text-align: center; /* Центрирование содержимого внутри формы */
-  }
-  
-  .nameProject {
-    font-size: 56px;
-    font-weight: 300;
-    color: #ffffff;
-    margin-bottom: 20px;
-  }
-  
-  .loginTitle {
-    font-size: 18px;
-    font-weight: bold;
-    color: #666;
-    margin-bottom: 10px;
-  }
-  
-  .form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: rgb(27, 27, 27);
-  }
-  
-  .label {
-    margin-bottom: 5px;
-    color: #ffffff;
-  }
-  
-  .input {
-    padding: 8px;
-    margin-bottom: 10px;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  
-  .btnContainer {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-  
-  .loginLink {
-    color: blue; /* Цвет ссылки */
-    text-decoration: none; /* Убрать подчеркивание */
-    font-weight: bold; /* Жирный шрифт */
-    /* Другие стили по вашему усмотрению */
-    &:hover {
-        color: rgb(100, 100, 204);/* Цвет при наведении */
-    }
-  }
-  
-  .errorMessage {
-    color: red;
-    margin-top: 10px;
-  }
-  
+}
+
+.errorMessage {
+  color: red;
+  margin-top: 10px;
+}

@@ -17,17 +17,6 @@
   z-index: 10;
 }
 
-<<<<<<< HEAD
-=======
-
-@media (max-width: 768px) {
-  .heading {
-    padding-top: 90px;
-  }
-
-}
-
->>>>>>> 1117adf (хранение изображений локально на серверном приложении, адаптив, интерфейс галлереи, фикс багов с токенами)
 .artZoneBG{
  /* зафиксируем элемент */
   top: 0;
@@ -42,19 +31,9 @@
 .artZone {
   padding: 10px;
   margin-left: 271px;
-<<<<<<< HEAD
+
   
 }
-
-
-=======
-}
-@media (max-width: 768px) {
-  .artZone {
-      margin-left: 0px;
-  }
-}
->>>>>>> 1117adf (хранение изображений локально на серверном приложении, адаптив, интерфейс галлереи, фикс багов с токенами)
 
 textarea {
   width: 98%;
@@ -101,13 +80,9 @@ select {
 .loginPls {
   padding: 10px;
   margin-left: 271px;
-<<<<<<< HEAD
-  
 }
-=======
-  font-size: 40px;
-  
-}
+
+
 
 @media (max-width: 768px) {
   .loginPls {
@@ -117,4 +92,17 @@ select {
   }
 
 }
->>>>>>> 1117adf (хранение изображений локально на серверном приложении, адаптив, интерфейс галлереи, фикс багов с токенами)
+
+@media (max-width: 768px) {
+  .artZone {
+      margin-left: 0px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .heading {
+    padding-top: 90px;
+  }
+
+}
