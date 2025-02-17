@@ -64,12 +64,12 @@ const App = () => {
       <Routes>
         <Route path="/" element = {<MainMenu/>}>
           <Route index element={<MainPage />} />
-          <Route path="generate" element={<ArtGenerate />} />
-          <Route path="test" element={<Test />} />
-          <Route path="help" />
-          <Route path="settings" />
-          <Route path="community" element={<Comunity />}/>
-          <Route path="user" element={<UserProfil />}/>
+          <Route path="/generate" element={<ArtGenerate />} />
+          <Route path="/test" element={<Test />} />
+          <Route path="/help" />
+          <Route path="/settings" />
+          <Route path="/community" element={<Comunity />}/>
+          <Route path="/user" element={<UserProfil />}/>
         </Route>
         <Route path="auth/login"  element={<Login />} />
         <Route path="/signup"  element={<Signup />} />

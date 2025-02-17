@@ -107,23 +107,6 @@
     cursor: not-allowed;
 }
 
-@media (max-width: 768px) {
-    .gallery {
-        margin-left: 0px;
-    }
-
-    .imageDetails {
-        width: 90vw;
-        max-height: 30vh; /* Adjusted height for smaller screens */
-    }
-
-    .imageDetails {
-        padding: 20px;
-        max-width: 70vw;
-        max-height: 95vh;
-    }
-}
-
 .gallery{
     margin-left: 271px;
     margin-top: 20px;
@@ -154,3 +137,21 @@ border-radius: 8px;
     z-index: 10;
   }
   
+
+  
+@media (max-width: 768px) {
+    .gallery {
+        margin-left: 0px;
+    }
+
+    .imageDetails {
+        width: 90vw;
+        max-height: 30vh; /* Adjusted height for smaller screens */
+    }
+
+    .imageDetails {
+        padding: 20px;
+        max-width: 70vw;
+        max-height: 95vh;
+    }
+}

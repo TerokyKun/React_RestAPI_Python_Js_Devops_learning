@@ -1,6 +1,6 @@
-
 import React, { useEffect, useState, useRef } from "react";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { selectIsAuth, selectToken } from "../redux/slises/auth";
 import Burgermenu from "../components/UI/Burgermenu/Burgermenu";
 import LazyLoad from 'react-lazyload';
@@ -9,12 +9,21 @@ import classes from "./UserProfil.module.scss";
 
 const UserProfil = () => {
     const isAuth = useSelector(selectIsAuth);
-    const token = useSelector(selectToken) || document.cookie.split('; ').find(row => row.startsWith('access_token=')).split('=')[1];
+    const token = useSelector(selectToken) || 
+                  document.cookie.split('; ').find(row => row.startsWith('access_token='))?.split('=')[1];
+    const navigate = useNavigate();
+
     const [imageData, setImageData] = useState([]);
     const [modalOpen, setModalOpen] = useState(false);
-    const [selectedImage, setSelectedImage] = useState(null); // Объект, содержащий путь к изображению и данные изображения
+    const [selectedImage, setSelectedImage] = useState(null);
     const [isDeleting, setIsDeleting] = useState(false);
     const modalRef = useRef(null);
+
+    useEffect(() => {
+        if (!token) {
+            navigate('/auth/login');  // Переадресация на страницу логина, если нет токена
+        }
+    }, [token, navigate]);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -22,22 +31,41 @@ const UserProfil = () => {
                 const response = await fetch('http://127.0.0.1:4000/imgdata', {
                     headers: { Authorization: `Bearer ${token}` },
                 });
+                
                 const result = await response.json();
-                console.log('Fetched data:', result); // Добавлено для вывода данных в консоль
-                const sortedImageData = result.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)); // Сортируем imageData по убыванию createdAt
-                setImageData(sortedImageData);
+                
+                // Проверка: Если в ответе есть message, это скорее всего ошибка
+                if (result.message) {
+                    console.error('Error:', result.message);  // Сообщение об ошибке в консоль
+                    if (result.message === 'Нет доступа') {
+                        // Если ошибка связана с отсутствием доступа, можно выполнить перенаправление
+                        navigate('/auth/login');
+                    }
+                    return;  // Выход, если есть сообщение об ошибке
+                }
+                
+                // Проверка: если результат — массив, сортируем
+                if (Array.isArray(result)) {
+                    const sortedImageData = result.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+                    setImageData(sortedImageData);
+                } else {
+                    console.error('Unexpected data format:', result);
+                }
+                
             } catch (error) {
                 console.error('Error fetching data:', error);
             }
         };
 
-        fetchData();
-    }, [token]);
+        if (token) {
+            fetchData();
+        }
+    }, [token, navigate]);
 
     const handleImageClick = (index) => {
         const selectedImageData = imageData[index];
-        const parsedImageData = JSON.parse(selectedImageData.imageData); // Парсим JSON строку изображения
-        setSelectedImage({ ...selectedImageData, ...parsedImageData }); // Сохраняем путь к изображению и данные изображения в selectedImage
+        const parsedImageData = JSON.parse(selectedImageData.imageData);
+        setSelectedImage({ ...selectedImageData, ...parsedImageData });
         setModalOpen(true);
     };
 
@@ -68,7 +96,10 @@ const UserProfil = () => {
     const deleteImage = async () => {
         setIsDeleting(true);
         try {
-            await axios.delete('http://127.0.0.1:4000/deleteImg', { data: { imageName: selectedImage.imageName }, headers: { Authorization: `Bearer ${token}` } });
+            await axios.delete('http://127.0.0.1:4000/deleteImg', { 
+                data: { imageName: selectedImage.imageName }, 
+                headers: { Authorization: `Bearer ${token}` } 
+            });
             alert("Изображение успешно удалено.");
             closeModal();
             setImageData(imageData.filter(img => img.imageName !== selectedImage.imageName));
@@ -80,13 +111,12 @@ const UserProfil = () => {
         }
     };
 
-
     return (
         <>
             <Burgermenu />
             <div className={classes.gallery}>
                 {imageData.map((item, index) => {
-                    const parsedImageData = JSON.parse(item.imageData); // Парсим JSON строку изображения
+                    const parsedImageData = JSON.parse(item.imageData);
                     return (
                         <LazyLoad key={index} height={200} offset={100} once>
                             <div className={classes.imageCard} onClick={() => handleImageClick(index)}>
@@ -105,11 +135,11 @@ const UserProfil = () => {
                 <div className={classes.modal}>
                     <div className={classes.modalContent} ref={modalRef}>
                         <div className={classes.imageDetails}>
-                        <img
-                            className={classes.modalImage}
-                            src={`http://127.0.0.1:4000${selectedImage.imagePath}`}
-                            alt={`Image ${selectedImage.imageName}`}
-                        />
+                            <img
+                                className={classes.modalImage}
+                                src={`http://127.0.0.1:4000${selectedImage.imagePath}`}
+                                alt={`Image ${selectedImage.imageName}`}
+                            />
                             <p>Prompt: {selectedImage.prompt}</p>
                             <p>Negative Prompt: {selectedImage.negative_prompt}</p>
                             <p>Width: {selectedImage.width}</p>
@@ -117,7 +147,6 @@ const UserProfil = () => {
                             <p>Seed: {selectedImage.seed}</p>
                             <p>Steps: {selectedImage.steps}</p>
                             <p>CFG Scale: {selectedImage.cfg_scale}</p>
-                            {/* Добавьте другие данные изображений здесь, если они есть */}
                         </div>
                         <button
                             className={classes.deleteButton}

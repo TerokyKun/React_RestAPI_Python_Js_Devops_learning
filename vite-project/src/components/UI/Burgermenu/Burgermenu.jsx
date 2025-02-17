@@ -37,7 +37,7 @@ const Burgermenu = () => {
   const onClickLogout = () => {
     if (window.confirm("Вы уверены, что хотите выйти?")) {
       dispatch(logout());
-      document.cookie = "access_token=; Max-Age=0; path=/";
+      document.cookie = "access_token=";
     }
   };
 
@@ -70,7 +70,7 @@ const Burgermenu = () => {
             </Link>
           )}
           {isAuth ? (
-            <Link to="user">
+            <Link to="/user">
               <AccauntAunt></AccauntAunt>
             </Link>
           ) : (
